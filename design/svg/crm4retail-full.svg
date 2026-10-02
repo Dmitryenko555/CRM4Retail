@@ -64,20 +64,23 @@
 <g transform="translate(0,712)">
 <rect width="1440" height="380" fill="#FFFFFF"/>
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
-<rect x="100" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="510" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="920" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="100" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="510" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="920" y="118" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <text x="120" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">Бизнес не знает своих клиентов</text>
 <text x="120" y="106" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#5B616B">Знакомо? CRM закрывает все три пробела.</text>
-<text x="120" y="162" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#D92D20">✕</text>
+<rect x="120" y="118" width="40" height="40" rx="12" fill="#F1ECE0"/>
+<g transform="translate(128,126)" fill="none" stroke="#D92D20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.8 14.3c2.7.4 4.1 2 4.7 4.7"/></g>
 <text x="120" y="194" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Кто его клиенты</text>
 <text x="120" y="222" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Нет портрета: возраст, частота визитов,</text>
 <text x="120" y="246" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">любимые категории — всё «на глаз».</text>
-<text x="530" y="162" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#D92D20">✕</text>
+<rect x="530" y="118" width="40" height="40" rx="12" fill="#F1ECE0"/>
+<g transform="translate(538,126)" fill="none" stroke="#D92D20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10l2.5-6h9L19 10"/><path d="M4 10h16l-1.4 10H5.4L4 10z"/><path d="M10 14v3.5M14 14v3.5"/></g>
 <text x="530" y="194" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Что они покупают</text>
 <text x="530" y="222" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">История покупок теряется в чеках,</text>
 <text x="530" y="246" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">корзину и интервалы никто не считает.</text>
-<text x="940" y="162" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#D92D20">✕</text>
+<rect x="940" y="118" width="40" height="40" rx="12" fill="#F1ECE0"/>
+<g transform="translate(948,126)" fill="none" stroke="#D92D20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h9a5 5 0 015 5v3"/></g>
 <text x="940" y="194" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Как вернуть их снова</text>
 <text x="940" y="222" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Скидки «для всех» съедают маржу,</text>
 <text x="940" y="246" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">а персонально предложить нечего.</text>
@@ -123,21 +126,25 @@
 <text x="120" y="236" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Анализ</text>
 <text x="120" y="264" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">CRM собирает чеки и строит</text>
 <text x="120" y="288" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">профиль каждого клиента.</text>
+<text x="120" y="318" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#191D23"><tspan fill="#D92D20" font-weight="700">→ </tspan>Итог: единая база чеков</text>
 <circle cx="443" cy="164" r="5" fill="#D92D20"/>
 <text x="435" y="204" font-family="ui-monospace, Menlo, monospace" font-size="16" font-weight="700" fill="#D92D20">02</text>
 <text x="435" y="236" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Сегменты</text>
 <text x="435" y="264" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Делит базу: новички,</text>
 <text x="435" y="288" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">постоянные, «спящие».</text>
+<text x="435" y="318" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#191D23"><tspan fill="#D92D20" font-weight="700">→ </tspan>Итог: видно, кто платит</text>
 <circle cx="758" cy="164" r="5" fill="#D92D20"/>
 <text x="750" y="204" font-family="ui-monospace, Menlo, monospace" font-size="16" font-weight="700" fill="#D92D20">03</text>
 <text x="750" y="236" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Акции</text>
 <text x="750" y="264" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Запускает персональные</text>
 <text x="750" y="288" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">предложения под сегмент.</text>
+<text x="750" y="318" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#191D23"><tspan fill="#D92D20" font-weight="700">→ </tspan>Итог: возвраты без скидок</text>
 <circle cx="1073" cy="164" r="5" fill="#D92D20"/>
 <text x="1065" y="204" font-family="ui-monospace, Menlo, monospace" font-size="16" font-weight="700" fill="#D92D20">04</text>
 <text x="1065" y="236" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Касса</text>
 <text x="1065" y="264" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Подсказывает продавцу шаг</text>
 <text x="1065" y="288" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">прямо в момент оплаты.</text>
+<text x="1065" y="318" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#191D23"><tspan fill="#D92D20" font-weight="700">→ </tspan>Итог: чек растёт на кассе</text>
 </g>
 
 <!-- ============ ДЛЯ КОГО ============ -->
@@ -145,9 +152,9 @@
 <rect width="1440" height="380" fill="#FFFFFF"/>
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
 <text x="120" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">Для кого подходит</text>
-<rect x="100" y="100" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="510" y="100" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="920" y="100" width="400" height="180" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="100" y="100" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="510" y="100" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="920" y="100" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <rect x="120" y="120" width="48" height="48" rx="14" fill="#F1ECE0"/>
 <g transform="translate(132,132)" fill="none" stroke="#D92D20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1.2-5h13.6L20 9"/><path d="M4 9v11h16V9"/><path d="M4 9h16"/><path d="M9.5 20v-5.5h5V20"/></g>
 <rect x="530" y="120" width="48" height="48" rx="14" fill="#F1ECE0"/>
@@ -157,21 +164,27 @@
 <text x="120" y="200" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Розничные магазины</text>
 <text x="120" y="228" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Одна точка: соберёте базу и вернёте</text>
 <text x="120" y="252" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">«спящих» за первые недели.</text>
+<line x1="120" y1="264" x2="480" y2="264" stroke="#191D23" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="120" y="282" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#5B616B">формат: одна точка</text>
 <text x="530" y="200" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Торговые сети</text>
 <text x="530" y="228" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Сквозная аналитика по точкам</text>
 <text x="530" y="252" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">и единый бонусный счёт.</text>
+<line x1="530" y1="264" x2="890" y2="264" stroke="#191D23" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="530" y="282" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#5B616B">формат: 2–10 точек</text>
 <text x="940" y="200" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Франшизы</text>
 <text x="940" y="228" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Единые стандарты акций для всех</text>
 <text x="940" y="252" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">партнёров и контроль исполнения.</text>
+<line x1="940" y1="264" x2="1300" y2="264" stroke="#191D23" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="940" y="282" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#5B616B">формат: сеть франшиз</text>
 </g>
 
 <!-- ============ КЕЙСЫ ============ -->
 <g transform="translate(0,2472)">
 <rect width="1440" height="540" fill="#FFFFFF"/>
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
-<rect x="100" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="510" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
-<rect x="920" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="100" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="510" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
+<rect x="920" y="118" width="400" height="200" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <text x="120" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">Результаты внедрений</text>
 <text x="120" y="106" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#5B616B">Примеры механик. Точные цифры — по согласованию с заказчиком.</text>
 <rect x="120" y="140" width="110" height="28" rx="14" fill="none" stroke="#D92D20" stroke-width="1.5"/>
@@ -199,9 +212,9 @@
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
 <text x="120" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">Цены и внедрение</text>
 <text x="120" y="106" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#5B616B">Тарифы уточняйте у заказчика. Внедрение — в четыре шага.</text>
-<rect x="100" y="130" width="400" height="212" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="100" y="130" width="400" height="212" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <rect x="510" y="118" width="400" height="224" rx="18" fill="#191D23"/>
-<rect x="920" y="130" width="400" height="212" rx="18" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="920" y="130" width="400" height="212" rx="18" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <text x="130" y="172" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Старт</text>
 <text x="130" y="208" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800" fill="#191D23">по запросу</text>
 <text x="130" y="236" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B"><tspan fill="#067647" font-weight="700">✓ </tspan>1 торговая точка</text>
@@ -237,7 +250,7 @@
 <rect width="1440" height="520" fill="#FFFFFF"/>
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
 <text x="120" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">Частые вопросы</text>
-<rect x="120" y="100" width="1200" height="118" rx="12" fill="#FFFFFF" stroke="#D9CFB4" stroke-width="2"/>
+<rect x="120" y="100" width="1200" height="118" rx="12" fill="#FFFFFF" stroke="#191D23" stroke-width="2"/>
 <text x="150" y="132" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#191D23"><tspan fill="#D92D20">▾  </tspan>Сколько длится внедрение?</text>
 <text x="177" y="160" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Пилот на одной точке — 1–2 недели без остановки торговли.</text>
 <text x="177" y="184" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B">Точные сроки зависят от касс и размера базы.</text>
