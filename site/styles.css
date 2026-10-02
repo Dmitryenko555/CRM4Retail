@@ -1,6 +1,6 @@
 :root{
-  --paper:#EDE6D3; --card:#FFFFFF; --ink:#191D23; --muted:#5B616B;
-  --hairline:#E5E0D5; --dots:#C9C2B2; --stamp:#D92D20; --till:#067647;
+  --paper:#FFFFFF; --card:#FFFFFF; --ink:#191D23; --muted:#5B616B;
+  --hairline:#D9CFB4; --card-line:#C9BC97; --dots:#C9C2B2; --stamp:#D92D20; --till:#067647;
   --dark:#191D23; --dark-muted:#A7AEB9;
   --radius:14px; --font:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -22,7 +22,7 @@ a:not(.btn):hover{color:#B32318;background-color:#E2D7BC}
 section[id],footer[id]{scroll-margin-top:84px}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:20;background:rgba(247,244,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
 .nav{display:flex;align-items:center;gap:16px;padding:12px 24px}
 a.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink)}
 a.logo svg{flex:none;transition:transform .18s ease}
@@ -54,7 +54,7 @@ a.logo:active svg{transform:scale(.93)}
 .mono-note.light{color:var(--dark-muted)}
 
 /* receipt */
-.receipt{position:relative;background:var(--card);border:1px solid var(--hairline);border-top:3px dashed var(--dots);border-bottom:3px dashed var(--dots);border-radius:4px;padding:104px 36px 28px;font-family:var(--mono)}
+.receipt{position:relative;background:var(--card);border:1.5px solid var(--card-line);border-top:3px dashed var(--dots);border-bottom:3px dashed var(--dots);border-radius:4px;padding:104px 36px 28px;font-family:var(--mono)}
 .receipt-title{text-align:center;font-weight:700;font-size:16px;margin:0 0 12px}
 .receipt-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:5px 0;border-bottom:1px dashed var(--hairline);margin:0}
 .receipt-row.total{font-weight:700;border-bottom:2px solid var(--ink)}
@@ -93,7 +93,7 @@ a.logo:active svg{transform:scale(.93)}
 /* faq */
 #cases .btn{margin-top:20px}
 /* faq — строки-ledger вместо белых карточек: не сливаются с фоном */
-#faq details{background:transparent;border-bottom:1px solid var(--hairline);border-radius:12px;padding:18px 20px;margin:0;transition:background-color .18s ease,box-shadow .18s ease}
+#faq details{background:transparent;border-bottom:1px solid var(--hairline);border-radius:12px;padding:24px 20px;margin:0;transition:background-color .18s ease,box-shadow .18s ease}
 #faq details:first-of-type{border-top:1px solid var(--hairline)}
 #faq details:hover{background-color:#E2D8BE}
 #faq details[open]{background-color:var(--card);box-shadow:0 8px 24px rgba(25,29,35,.08)}
@@ -109,7 +109,7 @@ a.logo:active svg{transform:scale(.93)}
 .block.dark .lead{color:var(--dark-muted)}
 .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
 .demo-point{border-left:3px solid var(--stamp);padding-left:14px;margin:0 0 14px}
-.demo-form{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:28px;display:grid;gap:14px}
+.demo-form{background:#F4EFE1;color:var(--ink);border:1.5px solid var(--card-line);border-radius:var(--radius);padding:28px;display:grid;gap:14px}
 .demo-form label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
 .demo-form .opt{font-weight:400;color:var(--muted)}
 .demo-form input{width:100%;padding:12px 14px;border:1.5px solid var(--hairline);border-radius:10px;font-size:16px;font-family:var(--font);background:#fff;color:var(--ink)}
@@ -127,7 +127,7 @@ a.logo:active svg{transform:scale(.93)}
 .copy{font-size:13px;font-family:var(--mono)}
 
 /* cards */
-.pain,.case{background:var(--card);border:1px solid var(--hairline);border-radius:18px;padding:28px;box-shadow:0 1px 2px rgba(25,29,35,.05),0 6px 18px rgba(25,29,35,.06);transition:transform .2s ease,box-shadow .2s ease}
+.pain,.case{background:var(--card);border:1.5px solid var(--card-line);border-radius:18px;padding:28px;box-shadow:0 1px 2px rgba(25,29,35,.05),0 6px 18px rgba(25,29,35,.06);transition:transform .2s ease,box-shadow .2s ease}
 .pain:hover,.case:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(25,29,35,.10)}
 .pain:active,.case:active{transform:translateY(-1px) scale(.99);box-shadow:none}
 .ico{width:48px;height:48px;border-radius:14px;background:#F1ECE0;display:flex;align-items:center;justify-content:center;margin:0 0 16px}
