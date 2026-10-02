@@ -13,6 +13,9 @@ $RECYCLE.BIN/
 # OS
 .DS_Store
 
+# Agent skills (локальное окружение)
+.agents/
+
 # Temp / local
 *.tmp
 *.log
