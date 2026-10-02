@@ -1,5 +1,5 @@
 :root{
-  --paper:#F7F4EC; --card:#FFFFFF; --ink:#191D23; --muted:#5B616B;
+  --paper:#EDE6D3; --card:#FFFFFF; --ink:#191D23; --muted:#5B616B;
   --hairline:#E5E0D5; --dots:#C9C2B2; --stamp:#D92D20; --till:#067647;
   --dark:#191D23; --dark-muted:#A7AEB9;
   --radius:14px; --font:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -14,7 +14,7 @@ h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0 0 8px}
 h3{font-size:20px;margin:0 0 8px}
 p{margin:0 0 12px}
 a:not(.btn){color:var(--stamp);text-decoration:none;border-radius:6px;transition:color .18s ease,background-color .18s ease}
-a:not(.btn):hover{color:#B32318;background-color:#EFE7D3}
+a:not(.btn):hover{color:#B32318;background-color:#E2D7BC}
 :focus-visible{outline:3px solid #93C5FD;outline-offset:2px;border-radius:6px}
 .skip{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:10px 14px;z-index:100}
 .skip:focus{left:8px;top:8px}
@@ -31,7 +31,7 @@ a.logo:hover svg{transform:rotate(-8deg) scale(1.06)}
 a.logo:active svg{transform:scale(.93)}
 .menu{display:flex;align-items:center;gap:18px;margin-left:auto}
 .menu a:not(.btn){text-decoration:none;color:var(--ink);font-size:15px;padding:6px 10px}
-.menu a:not(.btn):hover{color:#B32318;background-color:#E9E1CF;text-decoration:none}
+.menu a:not(.btn):hover{color:#B32318;background-color:#E2D7BC;text-decoration:none}
 .menu a.btn{color:#fff}
 .menu a.btn:hover{color:#fff;background-color:var(--stamp);filter:brightness(1.1)}
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--hairline);border-radius:10px;padding:10px;cursor:pointer}
@@ -93,10 +93,10 @@ a.logo:active svg{transform:scale(.93)}
 /* faq */
 #cases .btn{margin-top:20px}
 /* faq — строки-ledger вместо белых карточек: не сливаются с фоном */
-#faq details{border:0;border-bottom:1px solid var(--hairline);border-radius:0;background:transparent;padding:18px 8px;margin:0;transition:background-color .18s ease}
+#faq details{background:transparent;border-bottom:1px solid var(--hairline);border-radius:12px;padding:18px 20px;margin:0;transition:background-color .18s ease,box-shadow .18s ease}
 #faq details:first-of-type{border-top:1px solid var(--hairline)}
-#faq details:hover{background-color:#F1ECE0}
-#faq details[open]{background-color:var(--card);border:1px solid var(--hairline);border-radius:12px;padding:18px 20px;margin:12px 0}
+#faq details:hover{background-color:#E2D8BE}
+#faq details[open]{background-color:var(--card);box-shadow:0 8px 24px rgba(25,29,35,.08)}
 #faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;gap:12px;align-items:baseline}
 #faq summary::-webkit-details-marker{display:none}
 #faq summary::marker{content:""}
@@ -127,7 +127,7 @@ a.logo:active svg{transform:scale(.93)}
 .copy{font-size:13px;font-family:var(--mono)}
 
 /* cards */
-.pain,.case{background:var(--card);border:1px solid var(--hairline);border-radius:18px;padding:28px;transition:transform .2s ease,box-shadow .2s ease}
+.pain,.case{background:var(--card);border:1px solid var(--hairline);border-radius:18px;padding:28px;box-shadow:0 1px 2px rgba(25,29,35,.05),0 6px 18px rgba(25,29,35,.06);transition:transform .2s ease,box-shadow .2s ease}
 .pain:hover,.case:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(25,29,35,.10)}
 .pain:active,.case:active{transform:translateY(-1px) scale(.99);box-shadow:none}
 .ico{width:48px;height:48px;border-radius:14px;background:#F1ECE0;display:flex;align-items:center;justify-content:center;margin:0 0 16px}
@@ -142,11 +142,11 @@ a.logo:active svg{transform:scale(.93)}
 /* pressed states */
 a:active{transform:scale(.97)}
 .btn:active{transform:translateY(0) scale(.98);filter:brightness(.94)}
-.menu a:not(.btn):active{background-color:#DFD5BF;color:#B32318}
+.menu a:not(.btn):active{background-color:#D6C8A8;color:#B32318}
 @media (prefers-reduced-motion:reduce){.pain:hover,.case:hover{transform:none;box-shadow:none}a.logo:hover svg{transform:none}}
 
 /* текущий раздел в меню: приподнята + фон */
-.menu a:not(.btn).current{background-color:#E9E1CF;color:#B32318;transform:translateY(-2px);box-shadow:0 2px 0 var(--stamp)}
+.menu a:not(.btn).current{background-color:#E2D7BC;color:#B32318;transform:translateY(-2px);box-shadow:0 2px 0 var(--stamp)}
 /* валидация полей: рамка вместо лампы (идея: Artemsites/validate-signal-lamp) */
 .demo-form input.field-ok{border-color:var(--till);box-shadow:0 0 0 3px rgba(6,118,71,.15)}
 .demo-form input.field-err{border-color:var(--stamp);box-shadow:0 0 0 3px rgba(217,45,32,.12)}
