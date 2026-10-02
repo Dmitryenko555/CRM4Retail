@@ -91,9 +91,18 @@ a.logo:active svg{transform:scale(.93)}
 .step-n{font-family:var(--mono);font-weight:700;color:var(--stamp);margin:0 0 6px}
 
 /* faq */
-details{border:1px solid var(--hairline);border-radius:12px;background:var(--card);padding:16px 20px;margin:0 0 12px}
-summary{cursor:pointer;font-weight:700;font-size:17px}
-summary::marker{color:var(--stamp)}
+#cases .btn{margin-top:20px}
+/* faq — строки-ledger вместо белых карточек: не сливаются с фоном */
+#faq details{border:0;border-bottom:1px solid var(--hairline);border-radius:0;background:transparent;padding:18px 8px;margin:0;transition:background-color .18s ease}
+#faq details:first-of-type{border-top:1px solid var(--hairline)}
+#faq details:hover{background-color:#F1ECE0}
+#faq details[open]{background-color:var(--card);border:1px solid var(--hairline);border-radius:12px;padding:18px 20px;margin:12px 0}
+#faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;gap:12px;align-items:baseline}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::marker{content:""}
+#faq summary::before{content:"▸";color:var(--stamp);font-size:15px}
+#faq details[open] summary::before{content:"▾"}
+#faq details p{color:var(--muted);margin:12px 0 4px 27px}
 
 /* demo */
 .block.dark{background:var(--dark);color:#F7F4EC;border-radius:20px;border:0;padding:56px;margin:56px 0}
