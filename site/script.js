@@ -94,8 +94,8 @@
       var sec = document.getElementById(id);
       if (sec && sec.getBoundingClientRect().top + window.scrollY <= mid) current = id;
     });
-    if (current === 'demo') current = 'faq';
-    setCurrent(current); // null в hero — ничто не подсвечено
+    if (current === 'demo') current = null; // у демо нет пункта — подсветка гаснет
+    setCurrent(current); // null в hero и ниже FAQ — ничто не подсвечено // null в hero — ничто не подсвечено
   }
   function spyRequest() {
     if (!spyTicking) { spyTicking = true; window.requestAnimationFrame(spyTick); }

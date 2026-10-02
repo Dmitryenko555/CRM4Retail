@@ -90,9 +90,9 @@
 <g transform="translate(0,1092)">
 <rect width="1440" height="520" fill="#FFFFFF"/>
 <line x1="120" y1="0" x2="1320" y2="0" stroke="#D9CFB4" stroke-width="1"/>
-<rect x="120" y="42" width="32" height="32" rx="8" fill="#D92D20"/>
-<text x="136" y="66" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">4</text>
-<text x="162" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">функции CRM4Retail</text>
+<rect x="120" y="38" width="40" height="40" rx="10" fill="#D92D20"/>
+<text x="140" y="68" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">4</text>
+<text x="170" y="74" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="800" fill="#191D23">функции CRM4Retail</text>
 <text x="120" y="106" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#5B616B">Решение — строками прайса, без воды.</text>
 <rect x="120" y="148" width="12" height="12" rx="2" fill="#D92D20"/>
 <text x="148" y="160" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#191D23">Анализ клиентов</text>
@@ -223,8 +223,8 @@
 <text x="130" y="258" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B"><tspan fill="#067647" font-weight="700">✓ </tspan>База до 5 000 клиентов</text>
 <text x="130" y="280" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B"><tspan fill="#067647" font-weight="700">✓ </tspan>Бонусная программа</text>
 <text x="130" y="302" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#5B616B"><tspan fill="#067647" font-weight="700">✓ </tspan>Первая акция под ключ</text>
-<rect x="540" y="136" width="140" height="26" rx="13" fill="#D92D20"/>
-<text x="610" y="154" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Выбирают чаще</text>
+<rect x="750" y="136" width="140" height="26" rx="13" fill="#D92D20"/>
+<text x="820" y="154" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Выбирают чаще</text>
 <text x="540" y="194" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">Сеть</text>
 <text x="540" y="230" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">по запросу</text>
 <text x="540" y="258" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#A7AEB9"><tspan fill="#067647" font-weight="700">✓ </tspan>До 10 точек</text>
