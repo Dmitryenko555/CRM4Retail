@@ -24,8 +24,11 @@ section[id],footer[id]{scroll-margin-top:84px}
 /* header */
 .site-header{position:sticky;top:0;z-index:20;background:rgba(247,244,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
 .nav{display:flex;align-items:center;gap:16px;padding:12px 24px}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
-.logo span{color:var(--stamp)}
+a.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink)}
+a.logo svg{flex:none;transition:transform .18s ease}
+a.logo:hover{background:none;color:var(--ink)}
+a.logo:hover svg{transform:rotate(-8deg) scale(1.06)}
+a.logo:active svg{transform:scale(.93)}
 .menu{display:flex;align-items:center;gap:18px;margin-left:auto}
 .menu a:not(.btn){text-decoration:none;color:var(--ink);font-size:15px;padding:6px 10px}
 .menu a:not(.btn):hover{color:#B32318;background-color:#E9E1CF;text-decoration:none}
@@ -113,6 +116,25 @@ summary::marker{color:var(--stamp)}
 .foot-grid nav{display:grid;gap:8px;align-content:start}
 .foot-grid nav a{color:var(--ink);text-decoration:none}
 .copy{font-size:13px;font-family:var(--mono)}
+
+/* cards */
+.pain,.case{background:var(--card);border:1px solid var(--hairline);border-radius:18px;padding:28px;transition:transform .2s ease,box-shadow .2s ease}
+.pain:hover,.case:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(25,29,35,.10)}
+.pain:active,.case:active{transform:translateY(-1px) scale(.99);box-shadow:none}
+.ico{width:48px;height:48px;border-radius:14px;background:#F1ECE0;display:flex;align-items:center;justify-content:center;margin:0 0 16px}
+.tick{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px;color:var(--muted);font-size:15px}
+.tick li{padding-left:26px;position:relative}
+.tick li::before{content:"✓";position:absolute;left:0;color:var(--till);font-weight:800}
+.pain.popular{background:var(--dark);border-color:var(--dark);color:#F7F4EC}
+.pain.popular h3{color:#F7F4EC}
+.pain.popular .price{color:#fff}
+.pain.popular .tick{color:var(--dark-muted)}
+.pop-badge{display:inline-block;background:var(--stamp);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:3px 12px;margin:0 0 12px}
+/* pressed states */
+a:active{transform:scale(.97)}
+.btn:active{transform:translateY(0) scale(.98);filter:brightness(.94)}
+.menu a:not(.btn):active{background-color:#DFD5BF;color:#B32318}
+@media (prefers-reduced-motion:reduce){.pain:hover,.case:hover{transform:none;box-shadow:none}a.logo:hover svg{transform:none}}
 
 @media (max-width:900px){
   .hero-grid,.grid3,.demo-grid,.foot-grid{grid-template-columns:1fr}
