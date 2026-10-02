@@ -76,27 +76,35 @@
     });
   }
 
-  // Scroll-spy: кликнутый/текущий раздел выделяется в меню (приподнят + фон)
+  // Scroll-spy: пункт текущего раздела всегда подсвечен (не гаснет в hero и демо).
+  // hero → первый пункт, демо без пункта → держим предыдущий (FAQ).
   var spyLinks = Array.prototype.slice.call(document.querySelectorAll('.menu a[href^="#"]:not(.btn)'));
+  var spyOrder = ['features', 'how', 'for', 'cases', 'pricing', 'faq', 'demo'];
   function setCurrent(id) {
     spyLinks.forEach(function (a) {
       a.classList.toggle('current', a.getAttribute('href') === '#' + id);
     });
   }
-  if ('IntersectionObserver' in window && spyLinks.length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) setCurrent(en.target.id);
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    spyLinks.forEach(function (a) {
-      var sec = document.getElementById(a.getAttribute('href').slice(1));
-      if (sec) spy.observe(sec);
+  var spyTicking = false;
+  function spyTick() {
+    spyTicking = false;
+    var mid = window.scrollY + window.innerHeight * 0.4;
+    var current = 'features';
+    spyOrder.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec && sec.getBoundingClientRect().top + window.scrollY <= mid) current = id;
     });
+    if (current === 'demo') current = 'faq';
+    setCurrent(current);
   }
-  spyLinks.forEach(function (a) {
-    a.addEventListener('click', function () { setCurrent(a.getAttribute('href').slice(1)); });
-  });
+  function spyRequest() {
+    if (!spyTicking) { spyTicking = true; window.requestAnimationFrame(spyTick); }
+  }
+  if (spyLinks.length) {
+    window.addEventListener('scroll', spyRequest, { passive: true });
+    window.addEventListener('resize', spyRequest);
+    spyTick();
+  }
 
   // Tilt карточек (Artemsites/card-tilt → VanillaTilt), аккуратный: max 6, без блика.
   // Только для мыши и без prefers-reduced-motion.
