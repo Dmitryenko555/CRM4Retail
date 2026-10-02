@@ -136,6 +136,14 @@ a:active{transform:scale(.97)}
 .menu a:not(.btn):active{background-color:#DFD5BF;color:#B32318}
 @media (prefers-reduced-motion:reduce){.pain:hover,.case:hover{transform:none;box-shadow:none}a.logo:hover svg{transform:none}}
 
+/* текущий раздел в меню: приподнята + фон */
+.menu a:not(.btn).current{background-color:#E9E1CF;color:#B32318;transform:translateY(-2px);box-shadow:0 2px 0 var(--stamp)}
+/* валидация полей: рамка вместо лампы (идея: Artemsites/validate-signal-lamp) */
+.demo-form input.field-ok{border-color:var(--till);box-shadow:0 0 0 3px rgba(6,118,71,.15)}
+.demo-form input.field-err{border-color:var(--stamp);box-shadow:0 0 0 3px rgba(217,45,32,.12)}
+/* 3D-tilt готовит perspective (идея: Artemsites/card-tilt) */
+.pain,.case{transform-style:preserve-3d;will-change:transform}
+
 @media (max-width:900px){
   .hero-grid,.grid3,.demo-grid,.foot-grid{grid-template-columns:1fr}
   .ledger-row{grid-template-columns:1fr;gap:4px}
