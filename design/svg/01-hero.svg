@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640">
+  <rect width="1440" height="640" fill="#F7F4EC"/>
+  <!-- stamp -->
+  <g transform="rotate(-2 120 150)">
+    <rect x="120" y="132" width="302" height="38" rx="4" fill="none" stroke="#D92D20" stroke-width="2"/>
+    <text x="271" y="158" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#D92D20">для розницы • сетей • франшиз</text>
+  </g>
+  <!-- headline -->
+  <text x="120" y="262" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="#191D23">CRM для роста</text>
+  <text x="120" y="334" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="#191D23">продаж в рознице</text>
+  <text x="120" y="382" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#5B616B">CRM4Retail анализирует покупки клиентов</text>
+  <text x="120" y="410" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#5B616B">и помогает продавцам продавать больше.</text>
+  <!-- buttons -->
+  <rect x="120" y="444" width="220" height="58" rx="12" fill="#D92D20"/>
+  <text x="230" y="480" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">Получить демо</text>
+  <rect x="354" y="444" width="230" height="58" rx="12" fill="none" stroke="#191D23" stroke-width="1.5"/>
+  <text x="469" y="480" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="600" fill="#191D23">Как это работает</text>
+  <text x="120" y="536" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#5B616B">внедрение от 14 дней • без остановки кассы</text>
+  <!-- receipt zigzag top -->
+  <polygon points="900,96 920,80 940,96 960,80 980,96 1000,80 1020,96 1040,80 1060,96 1080,80 1100,96 1120,80 1140,96 1160,80 1180,96 1200,80 1220,96 1240,80 1240,96 900,96" fill="#FFFFFF"/>
+  <rect x="900" y="94" width="340" height="456" fill="#FFFFFF"/>
+  <polygon points="900,550 920,566 940,550 960,566 980,550 1000,566 1020,550 1040,566 1060,550 1080,566 1100,550 1120,566 1140,550 1160,566 1180,550 1200,566 1220,550 1240,566 1240,550 900,550" fill="#FFFFFF"/>
+  <!-- receipt body -->
+  <text x="1052" y="150" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="16" font-weight="700" fill="#191D23">ДЕМО-ЧЕК № 0341</text>
+  <line x1="940" y1="168" x2="1200" y2="168" stroke="#191D23" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <text x="940" y="198" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#191D23">ПОВТОРНЫЕ ВИЗИТЫ</text>
+  <text x="1200" y="198" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#067647">+23%</text>
+  <text x="940" y="224" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#191D23">СРЕДНИЙ ЧЕК</text>
+  <text x="1200" y="224" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#067647">+11%</text>
+  <text x="940" y="250" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#191D23">СЕГМЕНТОВ</text>
+  <text x="1200" y="250" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#191D23">12</text>
+  <text x="940" y="276" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#191D23">АКЦИЙ ЗАПУЩЕНО</text>
+  <text x="1200" y="276" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#191D23">34</text>
+  <line x1="940" y1="294" x2="1200" y2="294" stroke="#191D23" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <text x="940" y="322" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#191D23">ИТОГО ВЫРУЧКА</text>
+  <text x="1200" y="322" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#067647">+18%</text>
+  <!-- barcode -->
+  <g fill="#191D23">
+    <rect x="950" y="342" width="9" height="52"/><rect x="962" y="342" width="3" height="52"/><rect x="968" y="342" width="6" height="52"/><rect x="977" y="342" width="3" height="52"/><rect x="983" y="342" width="3" height="52"/><rect x="989" y="342" width="9" height="52"/><rect x="1001" y="342" width="3" height="52"/><rect x="1007" y="342" width="6" height="52"/><rect x="1016" y="342" width="12" height="52"/><rect x="1031" y="342" width="3" height="52"/><rect x="1037" y="342" width="3" height="52"/><rect x="1043" y="342" width="6" height="52"/><rect x="1052" y="342" width="3" height="52"/><rect x="1058" y="342" width="9" height="52"/><rect x="1070" y="342" width="6" height="52"/><rect x="1079" y="342" width="3" height="52"/><rect x="1085" y="342" width="12" height="52"/><rect x="1100" y="342" width="3" height="52"/><rect x="1106" y="342" width="6" height="52"/><rect x="1115" y="342" width="6" height="52"/><rect x="1124" y="342" width="3" height="52"/><rect x="1130" y="342" width="9" height="52"/><rect x="1142" y="342" width="3" height="52"/><rect x="1148" y="342" width="6" height="52"/><rect x="1157" y="342" width="3" height="52"/><rect x="1163" y="342" width="12" height="52"/><rect x="1178" y="342" width="3" height="52"/><rect x="1184" y="342" width="6" height="52"/>
+  </g>
+  <text x="1070" y="412" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#191D23">4 601 234 034 10</text>
+  <line x1="940" y1="428" x2="1200" y2="428" stroke="#191D23" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <text x="1070" y="456" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="700" fill="#191D23">СПАСИБО!</text>
+  <text x="1070" y="478" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#5B616B">продавайте больше</text>
+  <!-- demo stamp -->
+  <g transform="rotate(-12 1160 150)">
+    <circle cx="1160" cy="150" r="34" fill="none" stroke="#D92D20" stroke-width="2.5"/>
+    <text x="1160" y="156" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="800" fill="#D92D20">ДЕМО</text>
+  </g>
+</svg>

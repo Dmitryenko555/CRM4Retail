@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="580" viewBox="0 0 1440 580">
+  <rect width="1440" height="580" fill="#191D23"/>
+  <text x="120" y="200" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="-1" fill="#F7F4EC">Получить демо CRM</text>
+  <text x="120" y="248" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#A7AEB9">Покажем дашборд, сегменты и карточку</text>
+  <text x="120" y="274" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#A7AEB9">клиента на кассе — за 20 минут.</text>
+  <text x="120" y="330" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#A7AEB9">demo@example.ru • +7 ___ ___-__-__</text>
+  <text x="120" y="356" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#6B7280">заглушки — заменить контактами заказчика</text>
+  <!-- form card -->
+  <rect x="800" y="90" width="520" height="400" rx="16" fill="#F7F4EC"/>
+  <text x="840" y="140" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#191D23">Заявка на демо</text>
+  <rect x="840" y="160" width="440" height="54" rx="10" fill="#FFFFFF" stroke="#E5E0D5" stroke-width="1.5"/>
+  <text x="860" y="194" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#9AA0AA">Имя…</text>
+  <rect x="840" y="226" width="440" height="54" rx="10" fill="#FFFFFF" stroke="#E5E0D5" stroke-width="1.5"/>
+  <text x="860" y="260" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#9AA0AA">+7 ___ ___-__-__…</text>
+  <rect x="840" y="292" width="440" height="54" rx="10" fill="#FFFFFF" stroke="#E5E0D5" stroke-width="1.5"/>
+  <text x="860" y="326" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#9AA0AA">shop@example.ru…</text>
+  <rect x="840" y="362" width="18" height="18" rx="4" fill="none" stroke="#5B616B" stroke-width="1.5"/>
+  <text x="866" y="377" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#5B616B">Согласен на обработку персональных данных</text>
+  <rect x="840" y="398" width="440" height="54" rx="10" fill="#D92D20"/>
+  <text x="1060" y="432" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">Заказать демо</text>
+  <text x="120" y="500" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#6B7280">© CRM4Retail • учебный макет, скрыт от индексации</text>
+</svg>
