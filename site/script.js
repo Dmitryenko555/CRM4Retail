@@ -89,13 +89,13 @@
   function spyTick() {
     spyTicking = false;
     var mid = window.scrollY + window.innerHeight * 0.4;
-    var current = 'features';
+    var current = null;
     spyOrder.forEach(function (id) {
       var sec = document.getElementById(id);
       if (sec && sec.getBoundingClientRect().top + window.scrollY <= mid) current = id;
     });
     if (current === 'demo') current = 'faq';
-    setCurrent(current);
+    setCurrent(current); // null в hero — ничто не подсвечено
   }
   function spyRequest() {
     if (!spyTicking) { spyTicking = true; window.requestAnimationFrame(spyTick); }
