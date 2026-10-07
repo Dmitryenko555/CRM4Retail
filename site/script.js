@@ -106,6 +106,67 @@
     spyTick();
   }
 
+  // Модальная форма: все кнопки [data-modal] открывают заявку, Esc/фон закрывают
+  var overlay = document.getElementById('modal');
+  var modalForm = document.getElementById('m-form');
+  var modalEmail = document.getElementById('m-email');
+  var modalPhone = document.getElementById('m-phone');
+  var lastFocus = null;
+  function openModal() {
+    if (!overlay) return;
+    lastFocus = document.activeElement;
+    overlay.hidden = false;
+    window.requestAnimationFrame(function () { overlay.classList.add('open'); });
+    document.body.classList.add('locked');
+    var first = modalForm ? modalForm.querySelector('input') : null;
+    if (first) first.focus();
+  }
+  function closeModal() {
+    if (!overlay || overlay.hidden) return;
+    overlay.classList.remove('open');
+    document.body.classList.remove('locked');
+    window.setTimeout(function () { overlay.hidden = true; }, 180);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-modal]'), function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+  });
+  if (overlay) {
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+    var closer = overlay.querySelector('.modal-close');
+    if (closer) closer.addEventListener('click', closeModal);
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay && !overlay.hidden) closeModal();
+  });
+  if (modalEmail) {
+    modalEmail.addEventListener('input', function () { validateEmailField(modalEmail); });
+  }
+  if (modalPhone) {
+    modalPhone.addEventListener('input', function () { validatePhoneField(modalPhone); });
+  }
+  if (modalForm) {
+    modalForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = modalForm.querySelector('.form-error');
+      var emailOk = modalEmail ? validateEmailField(modalEmail) : true;
+      var phoneOk = modalPhone ? validatePhoneField(modalPhone) : true;
+      var bad = (emailOk === false) ? modalEmail : ((phoneOk === false) ? modalPhone : modalForm.querySelector(':invalid'));
+      if (emailOk === false || phoneOk === false || !modalForm.checkValidity()) {
+        if (err) {
+          err.hidden = false;
+          err.textContent = 'Проверьте имя, телефон (+7/8, 11 цифр), email и согласие.';
+        }
+        if (bad) bad.focus();
+        return;
+      }
+      var name = (document.getElementById('m-name') || {}).value || '';
+      modalForm.outerHTML = '<div class="form-ok" role="status"><b>Заявка отправлена' +
+        (name ? ', ' + name.replace(/[<>&"]/g, '') : '') +
+        '.</b><br>Мы свяжемся в течение рабочего дня и договоримся о демо.</div>';
+    });
+  }
+
   // Tilt карточек (Artemsites/card-tilt → VanillaTilt), аккуратный: max 6, без блика.
   // Только для мыши и без prefers-reduced-motion.
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
