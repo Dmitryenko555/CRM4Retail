@@ -1,0 +1,402 @@
+/* ==========================================================
+   CRM4Retail — styles.css
+   Порядок секций: токены → база → шапка → кнопки → hero →
+   чек → блоки → карточки → функции → шаги → кейсы → цены →
+   FAQ → демо → модалка → подвал → состояния → медиазапросы
+   ========================================================== */
+
+/* ---------- 1. Токены ---------- */
+:root{
+  /* Цвета */
+  --paper:#FFFFFF;
+  --card:#FFFFFF;
+  --ink:#191D23;
+  --muted:#5B616B;
+  --hairline:#D9CFB4;
+  --card-line:#191D23;
+  --dots:#C9C2B2;
+  --stamp:#D92D20;
+  --till:#067647;
+
+  /* Тёмные поверхности (CTA-блок, популярный тариф) */
+  --dark:#191D23;
+  --dark-muted:#A7AEB9;
+
+  /* Поверхности и состояния */
+  --form-bg:#F4EFE1;
+  --ico-bg:#F1ECE0;
+  --hover-bg:#E2D7BC;
+  --hover-ink:#B32318;
+  --active-bg:#D6C8A8;
+  --ok-bg:#ECFDF5;
+  --ledger-hover:#FAF8F1;
+
+  /* Базовое */
+  --radius:14px;
+  --font:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+/* ---------- 2. База ---------- */
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+
+h1,h2,h3{line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(36px,5.2vw,64px);letter-spacing:-.02em;margin:0 0 16px}
+h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0 0 8px}
+h3{font-size:20px;margin:0 0 8px}
+p{margin:0 0 12px}
+
+a:not(.btn){
+  color:var(--stamp);
+  text-decoration:none;
+  border-radius:6px;
+  transition:color .18s ease,background-color .18s ease;
+}
+a:not(.btn):hover{color:var(--hover-ink);background-color:var(--hover-bg)}
+a:active{transform:scale(.97)}
+
+:focus-visible{outline:3px solid #93C5FD;outline-offset:2px;border-radius:6px}
+
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:10px 14px;z-index:100}
+.skip:focus{left:8px;top:8px}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section[id],footer[id]{scroll-margin-top:84px}
+
+/* ---------- 3. Шапка и навигация ---------- */
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--hairline);
+}
+.nav{display:flex;align-items:center;gap:16px;padding:12px 24px}
+
+a.logo{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);
+}
+a.logo svg{flex:none;transition:transform .18s ease}
+a.logo:hover{background:none;color:var(--ink)}
+a.logo:hover svg{transform:rotate(-8deg) scale(1.06)}
+a.logo:active svg{transform:scale(.93)}
+
+.menu{display:flex;align-items:center;gap:18px;margin-left:auto}
+.menu a:not(.btn){
+  text-decoration:none;color:var(--ink);font-size:15px;
+  padding:6px 10px;border-radius:6px;
+}
+.menu a:not(.btn):hover{color:var(--hover-ink);background-color:var(--hover-bg)}
+.menu a:not(.btn):active{background-color:var(--active-bg);color:var(--hover-ink)}
+.menu a:not(.btn).current{
+  background-color:var(--hover-bg);color:var(--hover-ink);
+  transform:translateY(-2px);box-shadow:0 2px 0 var(--stamp);
+}
+.menu a.btn{color:#fff}
+.menu a.btn:hover{color:#fff;background-color:var(--stamp);filter:brightness(1.1)}
+
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--hairline);border-radius:10px;padding:10px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0}
+
+/* ---------- 4. Кнопки ---------- */
+.btn{
+  display:inline-block;
+  border:0;cursor:pointer;text-decoration:none;
+  font-weight:600;font-size:17px;
+  background:var(--stamp);color:#fff;
+  padding:13px 26px;border-radius:12px;
+  touch-action:manipulation;
+  transition:filter .18s ease,transform .18s ease,background-color .18s ease,color .18s ease;
+}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn:active{transform:translateY(0) scale(.98);filter:brightness(.94)}
+
+.btn.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.secondary:hover{background:var(--ink);border-color:var(--ink);color:#fff;filter:none;transform:translateY(-1px)}
+
+.btn-small{font-size:15px;padding:9px 18px}
+
+/* ---------- 5. Hero ---------- */
+.hero{padding:64px 0 56px;border-bottom:1px solid var(--hairline)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+
+.stamp{
+  display:inline-block;
+  color:var(--stamp);border:2px solid var(--stamp);border-radius:6px;
+  padding:4px 14px;font-size:15px;
+  transform:rotate(-2deg);margin:0 0 20px;
+}
+.sub{font-size:20px;color:var(--muted);max-width:34rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 16px}
+
+.mono-note{font-family:var(--mono);font-size:14px;color:var(--muted)}
+.mono-note.light{color:var(--dark-muted)}
+
+/* ---------- 6. Чек (hero) ---------- */
+.receipt{
+  position:relative;
+  background:var(--card);
+  border:1.5px solid var(--card-line);
+  border-top:3px dashed var(--dots);border-bottom:3px dashed var(--dots);
+  border-radius:4px;
+  padding:104px 36px 28px;
+  font-family:var(--mono);
+}
+.receipt-title{text-align:center;font-weight:700;font-size:16px;margin:0 0 12px}
+.receipt-row{
+  display:flex;justify-content:space-between;gap:12px;
+  font-size:14px;padding:5px 0;margin:0;
+  border-bottom:1px dashed var(--hairline);
+}
+.receipt-row.total{font-weight:700;border-bottom:2px solid var(--ink)}
+.up{color:var(--till)}
+
+.barcode{
+  height:54px;margin:14px 0 4px;
+  background:
+    repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px),
+    repeating-linear-gradient(90deg,transparent 0 6px,var(--ink) 6px 7px,transparent 7px 12px);
+}
+.receipt-num{text-align:center;font-size:12px;margin:0}
+.receipt-thanks{text-align:center;font-weight:700;margin:12px 0 0}
+.receipt-sub{text-align:center;font-size:13px;color:var(--muted);margin:0}
+
+.receipt-stamp{
+  position:absolute;top:18px;right:22px;
+  width:64px;height:64px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--stamp);border:2.5px solid var(--stamp);border-radius:50%;
+  font-weight:800;font-size:13px;
+  transform:rotate(10deg);margin:0;
+}
+
+/* ---------- 7. Блоки и сетки ---------- */
+.block{padding:96px 0;border-bottom:1px solid var(--hairline)}
+.lead{color:var(--muted);font-size:18px;margin:0 0 36px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.block h2 + .grid3{margin-top:30px}
+.section-cta{margin:40px 0 0}
+
+.h-mark{display:inline-block;vertical-align:-9px;margin-right:8px}
+.h-mark svg{display:block}
+
+/* ---------- 8. Карточки ---------- */
+.pain,.case{
+  background:var(--card);
+  border:1.5px solid var(--card-line);border-radius:18px;
+  padding:28px;
+  box-shadow:0 1px 2px rgba(25,29,35,.05),0 6px 18px rgba(25,29,35,.06);
+  transform-style:preserve-3d;will-change:transform;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.pain:hover,.case:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(25,29,35,.10)}
+.pain:active,.case:active{transform:translateY(-1px) scale(.99);box-shadow:none}
+
+.ico{
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--ico-bg);border-radius:14px;
+  margin:0 0 16px;
+}
+
+.card-meta{
+  font-family:var(--mono);font-size:13px;color:var(--muted);
+  margin:14px 0 0;padding-top:12px;
+  border-top:1px dashed var(--card-line);
+}
+
+/* Тарифы */
+.tick{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px;color:var(--muted);font-size:15px}
+.tick li{padding-left:26px;position:relative}
+.tick li::before{content:"✓";position:absolute;left:0;color:var(--till);font-weight:800}
+
+.price{font-size:26px;font-weight:800;margin:4px 0 8px}
+
+.pain.popular{position:relative;background:var(--dark);border-color:var(--dark);color:#F7F4EC}
+.pain.popular h3{color:#F7F4EC}
+.pain.popular .price{color:#fff}
+.pain.popular .tick{color:var(--dark-muted)}
+
+.pop-badge{
+  position:absolute;top:18px;right:18px;
+  display:inline-block;
+  background:var(--stamp);color:#fff;
+  font-size:13px;font-weight:700;
+  border-radius:999px;padding:3px 12px;margin:0;
+}
+
+/* Кейсы */
+.case-tag{display:inline-block;border:1.5px solid var(--stamp);color:var(--stamp);border-radius:999px;padding:2px 12px;font-size:13px;margin:0 0 10px}
+.case-metric{font-size:44px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
+#cases .btn{margin-top:20px}
+
+/* ---------- 9. Функции (ledger) ---------- */
+.ledger{margin:0}
+.ledger-row{
+  display:grid;grid-template-columns:minmax(220px,.9fr) 1fr;gap:16px;align-items:baseline;
+  padding:20px 12px;
+  border-bottom:1px solid var(--hairline);border-radius:10px;
+  transition:background-color .18s ease;
+}
+.ledger-row:hover{background-color:var(--ledger-hover)}
+.ledger-row dt{font-size:21px;font-weight:700}
+.ledger-row dt::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--stamp);margin-right:12px}
+.ledger-row dd{margin:0;color:var(--muted);font-size:17px;border-bottom:2px dotted var(--dots);padding-bottom:14px}
+
+/* ---------- 10. Шаги ---------- */
+.steps{list-style:none;margin:0;padding:28px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step;border-top:2px solid var(--ink)}
+.steps li{position:relative}
+.steps li::before{content:"";position:absolute;top:-35px;left:0;width:10px;height:10px;border-radius:50%;background:var(--stamp)}
+.step-n{font-family:var(--mono);font-weight:700;color:var(--stamp);margin:0 0 6px}
+
+.step-out{
+  font-size:14px;color:var(--ink);
+  margin:12px 0 0;padding-left:10px;
+  border-left:3px solid var(--stamp);
+}
+
+/* ---------- 11. Цены ---------- */
+.deploy{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.deploy li{border-left:3px solid var(--stamp);padding-left:14px}
+
+/* ---------- 12. FAQ ---------- */
+/* Строки-ledger вместо белых карточек: не сливаются с фоном, скачка геометрии нет */
+#faq details{
+  background:transparent;
+  border-bottom:1px solid var(--hairline);border-radius:12px;
+  padding:24px 20px;margin:0;
+  transition:background-color .18s ease,box-shadow .18s ease;
+}
+#faq details:first-of-type{border-top:1px solid var(--hairline)}
+#faq details:hover{background-color:var(--hover-bg)}
+#faq details[open]{background-color:var(--card);box-shadow:0 8px 24px rgba(25,29,35,.08)}
+
+#faq summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;gap:12px;align-items:baseline;
+  font-weight:700;font-size:18px;
+}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::marker{content:""}
+#faq summary::before{content:"▸";color:var(--stamp);font-size:15px}
+#faq details[open] summary::before{content:"▾"}
+#faq details p{color:var(--muted);margin:12px 0 4px 27px}
+
+/* ---------- 13. Демо-блок и форма ---------- */
+.block.dark{background:var(--dark);color:#F7F4EC;border-radius:20px;border:0;padding:56px;margin:56px 0}
+.block.dark .lead{color:var(--dark-muted)}
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
+.demo-point{border-left:3px solid var(--stamp);padding-left:14px;margin:0 0 14px}
+
+.demo-form{
+  display:grid;gap:14px;
+  background:var(--form-bg);color:var(--ink);
+  border:1.5px solid var(--card-line);border-radius:var(--radius);
+  padding:28px;
+}
+.demo-form label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+.demo-form .opt{font-weight:400;color:var(--muted)}
+.demo-form input{
+  width:100%;
+  padding:12px 14px;
+  border:1.5px solid var(--hairline);border-radius:10px;
+  font-size:16px;font-family:var(--font);
+  background:#fff;color:var(--ink);
+}
+.demo-form input::placeholder{color:#9AA0AA}
+
+/* Валидация: сигнал — рамка поля (идея: Artemsites/validate-signal-lamp) */
+.demo-form input.field-ok{border-color:var(--till);box-shadow:0 0 0 3px rgba(6,118,71,.15)}
+.demo-form input.field-err{border-color:var(--stamp);box-shadow:0 0 0 3px rgba(217,45,32,.12)}
+
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.consent input{width:auto;margin-top:4px;accent-color:var(--stamp)}
+
+.form-error{color:var(--stamp);font-size:14px;margin:0}
+.form-ok{background:var(--ok-bg);border:1.5px solid var(--till);border-radius:12px;padding:20px;color:var(--ink)}
+
+/* ---------- 14. Модальная форма ---------- */
+.modal-overlay{
+  position:fixed;inset:0;z-index:50;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  background:rgba(25,29,35,.55);
+  opacity:0;
+  transition:opacity .2s ease;
+}
+.modal-overlay[hidden]{display:none}
+.modal-overlay.open{opacity:1}
+
+.modal{
+  width:100%;max-width:480px;max-height:90vh;overflow:auto;
+  background:#fff;
+  border:2px solid var(--card-line);border-radius:20px;
+  padding:32px;
+  transform:translateY(14px) scale(.98);
+  transition:transform .2s ease;
+}
+.modal-overlay.open .modal{transform:none}
+
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.modal-head h2{font-size:26px;margin:0}
+
+.modal-close{
+  flex:none;
+  width:38px;height:38px;
+  background:var(--form-bg);
+  border:1.5px solid var(--card-line);border-radius:10px;
+  font-size:16px;color:var(--ink);cursor:pointer;
+  transition:background-color .18s ease,transform .18s ease;
+}
+.modal-close:hover{background:var(--hover-bg)}
+.modal-close:active{transform:scale(.93)}
+
+.modal .lead{font-size:16px}
+.modal-form{background:transparent;border:0;padding:0}
+body.locked{overflow:hidden}
+
+/* ---------- 15. Подвал ---------- */
+.site-footer{padding:40px 0 32px;color:var(--muted);font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;margin-bottom:20px}
+.foot-grid nav{display:grid;gap:8px;align-content:start}
+.foot-grid nav a{color:var(--ink);text-decoration:none}
+.copy{font-size:13px;font-family:var(--mono)}
+
+/* ---------- 16. Медиазапросы ---------- */
+@media (max-width:900px){
+  .hero-grid,.grid3,.demo-grid,.foot-grid{grid-template-columns:1fr}
+  .ledger-row{grid-template-columns:1fr;gap:4px}
+  .steps{grid-template-columns:1fr 1fr}
+  .burger{display:block}
+  .menu{
+    display:none;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--paper);
+    border-bottom:1px solid var(--hairline);
+    flex-direction:column;align-items:stretch;
+    padding:12px 24px 20px;gap:12px;
+  }
+  .menu.open{display:flex}
+  .receipt-stamp{width:52px;height:52px;font-size:11px;top:12px;right:14px}
+  .receipt-title,.receipt-row{padding-right:60px}
+  .block.dark{border-radius:0;margin:40px -24px;padding:40px 24px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn:hover{transform:none}
+  .pain:hover,.case:hover{transform:none;box-shadow:none}
+  a.logo:hover svg{transform:none}
+}
