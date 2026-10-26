@@ -1,9 +1,7 @@
 (function () {
-  // Year
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Burger
   var burger = document.querySelector('.burger');
   var menu = document.getElementById('menu');
   if (burger && menu) {
@@ -20,8 +18,6 @@
     });
   }
 
-  // Валидация в духе Artemsites/validate-signal-lamp, но сигнал — рамка поля, а не лампа.
-  // Email-паттерн — из validate-signal-lamp: /^[^ ]+@[^ ]+\.[a-z](.+)$/
   var EMAIL_PATTERN = /^[^ ]+@[^ ]+\.[a-z](.+)$/;
   function paint(input, state) {
     input.classList.remove('field-ok', 'field-err');
@@ -30,7 +26,7 @@
   }
   function validateEmailField(input) {
     var v = input.value.trim();
-    if (v === '') { paint(input, null); return null; } // пустое — нейтрально, как у лампы
+    if (v === '') { paint(input, null); return null; }
     var ok = EMAIL_PATTERN.test(v);
     paint(input, ok ? 'ok' : 'err');
     return ok;
@@ -44,7 +40,6 @@
     return ok;
   }
 
-  // Demo form: front-only validation + success state (backend подключается позже)
   var form = document.querySelector('.demo-form');
   var emailInput = document.getElementById('f-email');
   var phoneInput = document.getElementById('f-phone');
@@ -76,8 +71,6 @@
     });
   }
 
-  // Scroll-spy: пункт текущего раздела всегда подсвечен (не гаснет в hero и демо).
-  // hero → первый пункт, демо без пункта → держим предыдущий (FAQ).
   var spyLinks = Array.prototype.slice.call(document.querySelectorAll('.menu a[href^="#"]:not(.btn)'));
   var spyOrder = ['features', 'how', 'for', 'cases', 'pricing', 'faq', 'demo'];
   function setCurrent(id) {
@@ -94,8 +87,8 @@
       var sec = document.getElementById(id);
       if (sec && sec.getBoundingClientRect().top + window.scrollY <= mid) current = id;
     });
-    if (current === 'demo') current = null; // у демо нет пункта — подсветка гаснет
-    setCurrent(current); // null в hero и ниже FAQ — ничто не подсвечено // null в hero — ничто не подсвечено
+    if (current === 'demo') current = null;
+    setCurrent(current);
   }
   function spyRequest() {
     if (!spyTicking) { spyTicking = true; window.requestAnimationFrame(spyTick); }
@@ -106,7 +99,6 @@
     spyTick();
   }
 
-  // Модальная форма: все кнопки [data-modal] открывают заявку, Esc/фон закрывают
   var overlay = document.getElementById('modal');
   var modalForm = document.getElementById('m-form');
   var modalEmail = document.getElementById('m-email');
@@ -164,19 +156,6 @@
       modalForm.outerHTML = '<div class="form-ok" role="status"><b>Заявка отправлена' +
         (name ? ', ' + name.replace(/[<>&"]/g, '') : '') +
         '.</b><br>Мы свяжемся в течение рабочего дня и договоримся о демо.</div>';
-    });
-  }
-
-  // Tilt карточек (Artemsites/card-tilt → VanillaTilt), аккуратный: max 6, без блика.
-  // Только для мыши и без prefers-reduced-motion.
-  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  var calmMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (window.VanillaTilt && finePointer && !calmMotion) {
-    window.VanillaTilt.init(document.querySelectorAll('.pain, .case'), {
-      max: 6,
-      speed: 300,
-      scale: 1.02,
-      glare: false
     });
   }
 })();
