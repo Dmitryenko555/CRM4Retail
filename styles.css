@@ -132,6 +132,7 @@ a.logo:active svg{transform:scale(.93)}
   border-radius:4px;
   padding:104px 36px 28px;
   font-family:var(--mono);
+  line-height:1.45;
 }
 .receipt-title{text-align:center;font-weight:700;font-size:16px;margin:0 0 12px}
 .receipt-row{
@@ -354,8 +355,11 @@ body.locked{overflow:hidden}
     padding:12px 24px 20px;gap:12px;
   }
   .menu.open{display:flex}
-  .receipt-stamp{width:52px;height:52px;font-size:11px;top:12px;right:14px}
-  .receipt-title,.receipt-row{padding-right:60px}
+  .receipt{padding:84px 20px 24px}
+  .receipt-title,.receipt-row{padding-right:0}
+  .receipt-stamp{width:52px;height:52px;font-size:11px;top:14px;right:16px}
+  .steps{border-top:0;padding-top:4px;gap:32px}
+  .steps li::before{display:none}
   .block.dark{border-radius:0;margin:40px -24px;padding:40px 24px}
 }
 
